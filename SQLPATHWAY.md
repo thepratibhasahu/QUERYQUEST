@@ -34,7 +34,7 @@ LIMIT 10;
 
 ### 🟩Output
 ```sql
-                 user_id                       browse_date   item_id
+                 user_id                        browse_date  item_id
      336f9fdc-aaeb-48a1-a773-e3a935442d45       2017-12-20      3
      336f9fdc-aaeb-48a1-a773-e3a935442d45       2017-12-20     22
      336f9fdc-aaeb-48a1-a773-e3a935442d45       2017-12-20     25
