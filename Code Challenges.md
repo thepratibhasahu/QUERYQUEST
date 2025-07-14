@@ -1,4 +1,4 @@
-# Code Challenge 1
+# Code Challenges
 
 The `babies` table has the following columns:
 
@@ -27,7 +27,7 @@ WHERE name = 'Lillian';
 | 1881 |   723  |
 +------+--------+
 ```
-**(1.)** Find 20 distinct names that start with `‘S’`.                            
+**(2.)** Find 20 distinct names that start with `‘S’`.                            
 Select only the `name` column.
 ```SQL
 SELECT DISTINCT name
@@ -62,7 +62,7 @@ LIMIT 20;
 |  Serena    |
 +------------+
 ```
-**(1)** What are the top 10 names in 1880?                      
+**(3.)** What are the top 10 names in 1880?                      
 Select the `name`, `gender`, and number `columns`.
 ```SQL
 SELECT name, gender, number
@@ -116,6 +116,26 @@ The nomnom table has the following columns:
 **(1.)** Suppose your friend Jaime wants to go out to Japanese, but you’re on a budget.                      
 Return all the restaurants that are `Japanese` and `$$`.                                 
 Select all the columns.
+```sql
+SELECT *
+FROM nomnom
+WHERE cuisine = 'Japanese'
+  AND price = '$$';
+```
+### 🟩Output
+```sql
++--------+--------------+----------+--------+-------+--------+
+|  name  | neighborhood | cuisine  | review | price | health |
++--------+--------------+----------+--------+-------+--------+
+| Minca  | Downtown     | Japanese |  4.4   |  $$   |   A    |
+| Ippudo | Downtown     | Japanese |  4.4   |  $$   |   A    |
+| Ootoya | Downtown     | Japanese |  4.5   |  $$   |   A    |
++--------+--------------+----------+--------+-------+--------+
+```
+**(2.)** Your roommate Bevers can’t remember the exact name of a restaurant he went to but he knows it contains the word ‘noodle’ in it.                                  
+Can you find it for him using a query?                                   
+Select all the columns.
+```sql
 
 
 
