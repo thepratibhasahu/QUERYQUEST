@@ -147,7 +147,9 @@ WHERE name LIKE '%noodle%';
 | Great NY Noodletown    | Chinatown    | Chinese |  4.1   |  $$   |   B    |
 +------------------------+--------------+---------+--------+-------+--------+
 ```
-
+**(3.)** Some of the restaurants have not been inspected yet or are currently appealing their health grade score.   
+Find the restaurants that have empty `health` values.                           
+Select all the columns.
 
 
 
