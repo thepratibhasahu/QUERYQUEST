@@ -104,7 +104,7 @@ You’ll work with a table named `nomnom` with six columns.
 
 <img width="627" height="324" alt="image" src="https://github.com/user-attachments/assets/42e7cc6d-e97e-423b-882f-c1b9a6b238a6" />
 
-The nomnom table has the following columns:
+The `nomnom` table has the following columns:
 
 * `name` - the restaurant name
 * `neighborhood` - the neighborhood name
@@ -150,9 +150,49 @@ WHERE name LIKE '%noodle%';
 **(3.)** Some of the restaurants have not been inspected yet or are currently appealing their health grade score.   
 Find the restaurants that have empty `health` values.                           
 Select all the columns.
+```sql
+ SELECT * FROM nomnom
+ WHERE health IS NULL;
+```
+### 🟩Output
+```sql
++-------------------+--------------+-----------+--------+-------+--------+
+|       name        | neighborhood |  cuisine  | review | price | health |
++-------------------+--------------+-----------+--------+-------+--------+
+| Massawa           | Uptown       | Ethiopian |  4.0   |  $$   |  null  |
+| Wo Hop            | Chinatown    | Chinese   |  4.2   |  $$   |  null  |
+| Jacob's Pickles   | Uptown       | American  |  null  |  $$   |  null  |
+| Lighthouse        | Brooklyn     | American  |  4.6   |  $$   |  null  |
+| Los Hermanos      | Brooklyn     | Mexican   |  4.4   |   $   |  null  |
++-------------------+--------------+-----------+--------+-------+--------+
+```
+# News Headlines Introduction
+Here is the last dataset of the Code Challenge #1:
 
+* Baby Names
+* Restaurants
+* **News Headlines**
 
+There is a table called `news` with six columns.
 
+It is full of news article headlines from different publishing companies!
+
+→  Table diagram
+
+<img width="625" height="316" alt="image" src="https://github.com/user-attachments/assets/c6a07dce-5abe-4f77-90d7-e6e0e7e7524d" />
+
+The `news` table has the following columns:
+
+* `id` - the article identifier
+* `title` - the article title
+* `publisher` - the article publisher
+* `category` - the article category
+* `timestamp` - the time of publication
+* `url` - the article web address
+
+**(1.)** Order the table by `title` (from A-Z).                              
+Select only the `title` and `publisher` columns.
+```sql
 
 
 
