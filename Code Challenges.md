@@ -136,6 +136,11 @@ WHERE cuisine = 'Japanese'
 Can you find it for him using a query?                                   
 Select all the columns.
 ```sql
+SELECT * FROM nomnom
+WHERE name LIKE '%noodle%';
+```
+### 🟩Output
+```sql
 
 
 
