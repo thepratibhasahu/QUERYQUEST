@@ -193,8 +193,84 @@ The `news` table has the following columns:
 **(1.)** Order the table by `title` (from A-Z).                              
 Select only the `title` and `publisher` columns.
 ```sql
-
-
+SELECT title, publisher
+FROM news
+ORDER BY title ASC;
+```
+### 🟩Output
+```sql
++-----------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------+
+| title                                                                                                                       | publisher                                     |
++-----------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------+
+| 1.6m car recall put GM on a rough road                                                                                      | Boston Globe                                  |
+| 10 Things You Need To Know Before The Opening Bell                                                                          | Businessinsider India                         |
+| 10 Things You Need To Know This Morning                                                                                     | Business Insider                              |
+| 10.7 Billion trips taken on transit in America last year, the most since 1956                                               | Treehugger                                    |
+| 13 things we'll miss most about Sbarro                                                                                      | Guyism                                        |
+| 24m supply chain savings from banana merger                                                                                 | Supply Chain Standard                         |
+| 272 Protesters Have Vanished in Ukraine                                                                                     | Newser                                        |
+| 3 Predictions for the New Week                                                                                              | Motley Fool                                   |
+| 3 things to watch for as McDonald's fights to boost US sales                                                                | GlobalPost                                    |
+| 4 Speed-Reading Apps To Give You Lightning Fast Eyes                                                                        | ReadWrite                                     |
+| 4 nations urge US gas exports amid Ukraine crisis                                                                           | Idaho State Journal                           |
+| 4.7-Inch 'iPhone Air' Shown Off In New Concept Video                                                                        | Mac Rumors                                    |
+| 5 Reasons you should be excited for 'Titanfall'                                                                             | Examiner.com                                  |
+| 5 great moments from Episode 1 of 'Cosmos'                                                                                  | Mother Nature Network (blog)                  |
+| 5 things you missed: Apple releases iOS 7.1, Tumblr allows updates by phone ...                                             | San Jose Mercury News                         |
+| 7 Things You Need To Know About iOS 7.1                                                                                     | ReadWrite                                     |
+| 8 Crucial Reasons to Download iOS 7.1 Now                                                                                   | GeekSugar.com                                 |
+| 840MB Titanfall Day One Patch is Now Live on Xbox One                                                                       | SegmentNext                                   |
+| A "Credible Threat" Approach to Long Run Deterrence of Russian-European ...                                                 | Forbes                                        |
+| A Recall Bares GM's Love of Red Tape                                                                                        | Wall Street Journal                           |
+| A Secular Bull Market Arises From the 2009 Shadows                                                                          | Investorplace.com                             |
+| A Smartwatch Version of Android Is Reportedly Coming Soon                                                                   | TIME                                          |
+| A Week After Mt. Gox Collapse, Japan Struggles to Understand Bitcoin                                                        | Moneynews                                     |
+| A closer look at Titanfall's not-so-secret weapon: Microsoft's cloud                                                        | Engadget                                      |
+| A novel in 90 minutes? It's possible with new speed-reading technology                                                      | New York Daily News                           |
+| A week after Mt Gox collapse, Japan struggles to understand ..                                                              | Gulf Times                                    |
+| AA and JetBlue end ticketing agreement                                                                                      | Travel Weekly                                 |
+| AAA Mich.: Gas prices fall 1 cent over past week                                                                            | Argus Press                                   |
+| AAA Michigan: Gas prices fall 1 cent over past week                                                                         | Detroit Free Press                            |
+| AAA: Gas prices spring forward                                                                                              | Augusta Free Press                            |
+| AAA: Gas prices up another four cents this week                                                                             | Wicked Local Raynham                          |
+| AAA: RI gas prices climb another 2 cents                                                                                    | The Providence Journal                        |
+| ALL ABOARD THE SPACESHIP OF THE IMAGINATION: Did You Watch The ...                                                          | xoJane                                        |
+| ANALYSIS-GM must address recall soon to avoid damage to reputation                                                          | Chicago Tribune                               |
+| APTA touts 2013 public transit ridership                                                                                    | RailwayAge Magazine                           |
+| AT&T's New Mobile Plans; Apple Wins Smartphone Sales; Spritz Speed Reading                                                  | PC Magazine                                   |
+| AUTO: Safety regulators demand recall data from General Motors                                                              | Shelby Township Source Newspapers             |
+| Accounting News Roundup: Sbarro is Bankrupt (Again); PwC's Latest Buy ...                                                   | Going Concern                                 |
+| Ackman Bets $1 Billion on Herbalife                                                                                         | akgulian.com                                  |
+| Ackman Dwarfed By Herbalife Spending In Lobbying Battle                                                                     | Business Insider                              |
+| Ackman and Herbalife                                                                                                        | FutureOfCapitalism.com                        |
+| Ackman outspent by Herbalife in lobbying battle                                                                             | Hedgeworld (subscription)                     |
+| Ackman's anti-Herbalife lobbying detailed                                                                                   | MarketWatch (blog)                            |
+| Addicted to 'Titanfall'                                                                                                     | CANOE                                         |
+| Akron weekly gas update for March 10                                                                                        | Hudson Hub-Times                              |
+| All out of dough: Sbarro Pizza files for bankruptcy for the second time in three ...                                        | Daily Mail                                    |
+| Amarillo Gas Prices Rise Again                                                                                              | MyHighPlains                                  |
+| American Airlines & JetBlue Airways To Terminate Partnership - Quick Facts                                                  | RTT News                                      |
+| American Airlines & JetBlue End Agreement                                                                                   | CBS Local                                     |
+| American Airlines & JetBlue: Le Divorce                                                                                     | Barron's (blog)                               |
++-----------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------+
+```
+**(2.)** Which article names have the word `'bitcoin'` in it?                        
+Select all the columns.
+```sql
+ SELECT * FROM news
+ WHERE title LIKE '%bitcoin%';
+```
+### 🟩Output
+```sql
+|   id | title                                                                   | publisher             | category   |     timestamp | url                                                                                                                                                              |
+|------|-------------------------------------------------------------------------|-----------------------|------------|---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  199 | Bitcoin Exchange Mt. Gox Seeks US Bankruptcy Relief                     | Law360 (subscription) | b          | 1394474320964 | http://www.law360.com/articles/516804/bitcoin-exchange-mt-gox-seeks-us-bankruptcy-relief                                                                         |
+|  201 | Bitcoin exchange Mt. Gox files for US bankruptcy protection             | The Globe and Mail    | b          | 1394474321662 | http://www.theglobeandmail.com/report-on-business/international-business/us-business/bitcoin-exchange-mt-gox-files-for-us-bankruptcy-protection/article17392957/ |
+|  202 | Hackers Claim Mt. Gox CEO Mark Karpeles Held 'Stolen' Customer Bitcoins | Design & Trend        | b          | 1394474321847 | http://www.designntrend.com/articles/11510/20140310/hackers-strike-again-claiming-mt-gox-ceo-mark-karpeles-held-customer-bitcoins.htm                            |
+|  205 | Report: Mt. Gox CEO Holding 'Stolen' Bitcoins                           | PC Magazine           | b          | 1394474322360 | http://www.pcmag.com/article2/0,2817,2454756,00.asp                                                                                                              |
+|  209 | Mt. Gox Chief Stole 100000 Bitcoins, Hackers Claim                      | InformationWeek       | b          | 1394474323133 | http://www.informationweek.com/security/attacks-and-breaches/mt-gox-chief-stole-100000-bitcoins-hackers-claim/d/d-id/1114197?_mc=RSS_IWK_EDT                     |
+|  213 | Anonymous hackers claim MtGox still has 'stolen' Bitcoins               | SC Magazine UK        | b          | 1394474323797 | http://www.scmagazineuk.com/anonymous-hackers-claim-mtgox-still-has-stolen-bitcoins/article/337507/                                                              |
+```
 
 
 
