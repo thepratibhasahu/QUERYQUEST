@@ -276,8 +276,38 @@ Select all the columns.
 `'t'` stands for Technology                                
 What are the 20 business articles published most recently?                 
 Select all the columns.
-
-
+```SQL
+SELECT *
+FROM news
+WHERE category = 'b'
+ORDER BY timestamp DESC
+LIMIT 20;
+```
+### 🟩Output
+```sql
+|   id | title                                                                                              | publisher                             | category |     timestamp  | url                                                                                                                                                                              |
+|------|----------------------------------------------------------------------------------------------------|---------------------------------------|----------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 2000 | Edward Snowden at SXSW Conference: I Saw the Constitution Being Violated ...                       | NBC 5 Dallas-Fort Worth               | t        | 1394513125059  | http://www.nbcdfw.com/news/local/Edward-Snowden-to-Speak-at-SXSW-Conference-249293301.html                                                                                      |
+| 1999 | VIDEO: Snowden Says Encryption And Oversight Are Key To Protecting The ...                         | Telemanagement                        | t        | 1394513124882  | http://www.tele-management.ca/2014/03/video-snowden-says-encryption-and-oversight-are-key-to-protecting-the-public-from-surveillance/                                          |
+| 1998 | Snowden: "We Need A Watchdog That Watches Congress"                                                | TechCrunch                            | t        | 1394513124690  | http://techcrunch.com/2014/03/10/snowden-we-need-a-watchdog-that-watches-congress/                                                                                              |
+| 1997 | Snowden Urges Technology Companies to Adopt Better Encryption                                      | Wall Street Journal                   | t        | 1394513124414  | http://online.wsj.com/article/BT-CO-20140310-713737.html                                                                                                                        |
+| 1996 | Snowden advocates at SXSW for improved data security                                               | CSO                                   | t        | 1394513124246  | http://www.csoonline.com/article/749509/snowden-advocates-at-sxsw-for-improved-data-security                                                                                    |
+| 1995 | Dean Bailey dies aged 47                                                                           | Brisbane Times                        | t        | 1394513124044  | http://media.brisbanetimes.com.au/national/selections/dean-bailey-dies-aged-47-5249747.html                                                                                     |
+| 1994 | Defiant Snowden would 'absolutely' leak again                                                      | Brisbane Times                        | t        | 1394513123835  | http://media.brisbanetimes.com.au/national/selections/defiant-snowden-would-absolutely-leak-again-5249675.html                                                                 |
+| 1993 | Cowan confessions are 'so powerful'                                                                | Brisbane Times                        | t        | 1394513123633  | http://media.brisbanetimes.com.au/national/selections/cowan-confessions-are-so-powerful-5249867.html                                                                           |
+| 1992 | NSA leaker Edward Snowden calls SXSW Interactive audience to action                                | Austin American-Statesman             | t        | 1394513123457  | http://www.statesman.com/news/technology/nsa-leaker-edward-snowden-calls-sxsw-interactive-a/nd9XX/                                                                             |
+| 1991 | NSA leaks fueled needed debate, Snowden tells SXSW                                                 | International Business Times, India   | t        | 1394513123138  | http://www.ibtimes.co.in/video/?video_id=NTM0MzU1fHwxNDcxfHx8fHx8MTZ8fA==&video_tile=NSA+leaks+fueled+needed+debate%2C+Snowden+tells+SXSW                                      |
+| 1990 | Snowden: Proposed NSA reforms vindicate data leaks                                                 | Business Spectator                    | t        | 1394513122929  | http://www.businessspectator.com.au/news/2014/3/11/technology/snowden-proposed-nsa-reforms-vindicate-data-leaks                                                                |
+| 1989 | Greenwald on Politics, Privacy, Journalism                                                         | Austin Chronicle                      | t        | 1394513122736  | http://www.austinchronicle.com/daily/news/2014-03-10/greenwald-on-politics-privacy-journalism/                                                                                  |
+| 1988 | NSA leaker Edward Snowden speaks to SXSW audience, says he has no ...                              | 10News                                | t        | 1394513122526  | http://www.10news.com/news/u-s-world/nsa-leaker-edward-snowden-speaks-to-sxsw-audience-says-has-no-regrets-for-leaks                                                           |
+| 1987 | Snowden: Leaving NSA scandal unresolved sends a 'green light' for invasive ...                     | VentureBeat                           | t        | 1394513122324  | http://venturebeat.com/2014/03/10/snowden-leaving-nsa-scandal-unresolved-sends-a-green-light-for-invasive-surveillance-across-the-world/                                      |
+| 1986 | NSA views encryption as evidence of suspicion and will target those who use it ...                 | VentureBeat                           | t        | 1394513122056  | http://venturebeat.com/2014/03/10/nsa-views-encryption-as-evidence-of-suspicion-and-will-target-those-who-use-it-security-journalist-says/                                    |
+| 1985 | SXSW highlights: Snowden speaks, Facebook's F8 returns                                             | MarketWatch (blog)                    | t        | 1394513121886  | http://blogs.marketwatch.com/thetell/2014/03/10/sxsw-highlights-snowden-speaks-facebooks-f8-returns/                                                                            |
+| 1984 | Snowden Says He Has No Regrets                                                                     | KFBK                                  | t        | 1394513121743  | http://www.kfbk.com/articles/kfbk-news-461777/snowden-says-he-has-no-regrets-12141645/                                                                                          |
+| 1983 | 'I would do it again': NSA leaker Snowden                                                          | TODAYonline                           | t        | 1394513121526  | http://www.todayonline.com/world/americas/i-would-do-it-again-nsa-leaker-snowden                                                                                                |
+| 1982 | Snowden Calls for More Oversight of Congress                                                       | Defense One                           | t        | 1394513121367  | http://www.defenseone.com/management/2014/03/sxsw-snowden-calls-more-oversight-congress/80221/?oref=d-skybox                                                                   |
+| 1981 | Snowden: Mass surveillance is backfiring on US efforts to combat terrorism                         | Arizona Daily Star                    | t        | 1394513121121  | http://azstarnet.com/ap/national/snowden-mass-surveillance-is-backfiring-on-us-efforts-to-combat/article_3e131515-bb8e-5428-9542-3577712675f7.html                            |
+```
 
 
 
