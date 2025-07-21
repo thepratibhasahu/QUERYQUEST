@@ -29,3 +29,11 @@ id   full_name        	        email                                zip    ip_ad
 9    Donovan Worsalls         	dworsalls8@wikimedia.org             20078  101.219.105.228
 10   Lynna Grindley           	lgrindley9@studiopress.com           72204  149.164.116.199
 ```
+**(2.)** The finance department noted that some of the fraudulent transactions were recorded as coming from Smokey Bear’s zip code (20252).                
+You agree this is suspicious, it’s unlikely that the fire prevention mascot is using Reputable Company’s services.          
+Find the `full_names` and `emails` of the transactions listing 20252 as the zip code.
+```sql
+SELECT full_name, email, zip
+FROM transaction_data
+WHERE zip = 20252;
+```
