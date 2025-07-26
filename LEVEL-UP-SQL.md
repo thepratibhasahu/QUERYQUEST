@@ -39,7 +39,7 @@ WHERE zip = 20252;
 ```
 ### 🟩Output
 ```sql
-| full\_name       | email                                                                   | zip   |
+| full_name        | email                                                                   | zip   |
 | ---------------- | ----------------------------------------------------------------------- | ----- |
 | Grantham Keat    | [gkeat2h@ucla.edu](mailto:gkeat2h@ucla.edu)                             | 20252 |
 | Francesca Braban | [fbraban4z@free.fr](mailto:fbraban4z@free.fr)                           | 20252 |
