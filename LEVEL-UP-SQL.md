@@ -37,3 +37,15 @@ SELECT full_name, email, zip
 FROM transaction_data
 WHERE zip = 20252;
 ```
+### 🟩Output
+```sql
+| full\_name       | email                                                                   | zip   |
+| ---------------- | ----------------------------------------------------------------------- | ----- |
+| Grantham Keat    | [gkeat2h@ucla.edu](mailto:gkeat2h@ucla.edu)                             | 20252 |
+| Francesca Braban | [fbraban4z@free.fr](mailto:fbraban4z@free.fr)                           | 20252 |
+| Winnah Spiring   | [wspiring63@huffingtonpost.com](mailto:wspiring63@huffingtonpost.com)   | 20252 |
+| Jenn Matzel      | [jmatzel70@cmu.edu](mailto:jmatzel70@cmu.edu)                           | 20252 |
+| Chance Pinare    | [cpinare7p@examiner.com](mailto:cpinare7p@examiner.com)                 | 20252 |
+| Milli Bovingdon  | [mbovingdon8c@wix.com](mailto:mbovingdon8c@wix.com)                     | 20252 |
+| Ernie Levermore  | [elevermoreqw@cocolog-nifty.com](mailto:elevermoreqw@cocolog-nifty.com) | 20252 |
+```
